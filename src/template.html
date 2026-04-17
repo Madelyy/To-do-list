@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>To-do List</h1>
+        </header>
+        <div class="sidebar">
+            <div class="logo-container">
+                <h1>Workspace</h1>
+            </div>
+            <div class="tasks-container">
+                <span id="all-tasks">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3M7 7H9V9H7V7M7 11H9V13H7V11M7 15H9V17H7V15M17 17H11V15H17V17M17 13H11V11H17V13M17 9H11V7H17V9Z" />
+                    </svg>
+                    <p>All Tasks</p>
+                </span>
+                <span id="done">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+                    </svg>
+                    <p>Done</p>
+                </span>
+            </div>
+            <div class="folders-container">
+                <p>Folders</p>
+                <span id="work" class="work">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M10,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V8C22,6.89 21.1,6 20,6H12L10,4Z" />
+                    </svg>
+                    <p>Work</p>
+                </span>
+                <span id="personal" class="personal">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                    </svg>
+                    <p>Personal</p>
+                </span>
+                <span id="study" class="study">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z" />
+                    </svg>
+                    <p>Study</p>
+                </span>
+            </div>
+        </div>
+        <div id="content"></div>
+
+    </div>
+
+    <dialog id="todo-dialog">
+        <form id="todo-form">
+            <label>Task Title</label>
+            <input id="todo-title" type="text" placeholder="New task..." required />
+            <label>Priority</label>
+            <select id="todo-priority" required>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <label>Description</label>
+            <textarea id="todo-description" placeholder="Short description..." required></textarea>
+            <label>Due Date</label>
+            <input id="todo-date" type="date" />
+            <label>Folder</label>
+            <select id="todo-folder" required>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Study">Study</option>
+            </select>
+            <button id="add-btn" type="submit">Add</button>
+            <button id="close-dialog" type="button">Cancel</button>
+        </form>
+    </dialog>
+    <div>
+        <button id="open-dialog">+</button>
+    </div>
+</body>
+
+</html>
